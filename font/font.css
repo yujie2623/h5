@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "fzkt";
+    src: url("../font/fzkt.ttf") format('truetype')
+}
+
+@font-face {
+    font-family: "kt";
+    src: url("../font/kt.TTF") format('truetype')
+}

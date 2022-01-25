@@ -1,0 +1,99 @@
+@import url(../font/font.css);
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Heiti SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+
+  /* position: fixed; */
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.pagefont {
+  /* font-family: 'songtif'; */
+  font-weight: 600;
+}
+
+img {
+  display: block;
+}
+
+@media screen and (orientation: portrait) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .index .indexpage {
+    width: calc(100vh + env(safe-area-inset-bottom));
+    width: calc(100vh + constant(safe-area-inset-bottom));
+  }
+}
+
+@media screen and (orientation: landscape) {
+
+  html,
+  body {
+    overflow-y: hidden;
+  }
+
+  .index .indexpage {
+    width: calc(100vw + env(safe-area-inset-bottom));
+    width: calc(100vw + constant(safe-area-inset-bottom));
+  }
+}
+
+#wrapper {
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  position: relative;
+  top: 0;
+  transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  /* IE 9 -webkit-transform-origin:0% 0%; /* Safari 和 Chrome */
+  -moz-transform-origin: 0% 0%;
+  /* Firefox */
+  -o-transform-origin: 0% 0%;
+  /* Opera */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 3%, #DCEBFF 100%, #DCEBFF 100%);
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+@media screen and (orientation: portrait) {
+  #wrapper {
+    left: 100%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    height: 100vmin;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #wrapper {
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    height: 100vh;
+  }
+}
